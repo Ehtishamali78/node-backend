@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 
-const blobServiceClient = BlobServiceClient.fromConnectionString('DefaultEndpointsProtocol=https;AccountName=blobvideostorage;AccountKey=lnZQxwU07BCRh8yxAteGdmssoJkdlIob3bYzh+MHc+xadqlhNEAEVdnU45hjsg3PL81zGPM5crns+ASt5kHETQ==;EndpointSuffix=core.windows.net');
+const blobServiceClient = BlobServiceClient.fromConnectionString(process.env.BLOB_CONN_STRING);
 const containerName = 'videos';
 
 // Upload Video
